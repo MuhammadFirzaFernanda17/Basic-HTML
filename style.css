@@ -1,0 +1,347 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1e1e1e;
+}
+
+
+header nav {
+    position: sticky;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: #2d2d30;
+    justify-content: space-evenly;
+}
+
+
+header nav ul li a {
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 15px; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: white; 
+    color: black; 
+}
+
+ul {
+    width: 500px;
+    display: flex;
+    margin: 30 px 150 px;
+    justify-content: space-evenly;
+    color: white;
+    list-style-type: none;
+}
+
+ul a {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+#jumbotron{
+    position: relative;
+    background-image: url(asset/gambar/bgatas.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#jumbotron-text h1, #jumbotron-text h3 {
+    pointer-events: none;
+    text-align: center;
+    color: white;
+    text-shadow: -1.5px -1.5px 0 #000,  
+                 1.5px -1.5px 0 #000,
+                -1.5px 1.5px 0 #000,
+                 1.5px 1.5px 0 #000; 
+}
+
+#jumbotron-text h1 {
+    font-size: 36px;
+}
+
+#jumbotron-text h3 {
+    font-size: 24px;
+}
+
+#jumbotron-text a {
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    transition: .3;
+}
+
+#jumbotron-text a:hover {
+    background-color: white;
+    color: black;
+}
+
+#paket h1 {
+    font-size: 25px;
+    background-color: #1e1e1e;
+    margin-top: 0;
+    color: white;
+    text-shadow: -1.5px -1.5px 0 #000,  
+    1.5px -1.5px 0 #000,
+   -1.5px 1.5px 0 #000,
+    1.5px 1.5px 0 #000;
+}
+
+.kotakganal {
+    width: 76%;
+    height: auto;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.kotakganal h2 {
+    margin-top: 30px;
+    font-weight: 400;
+    font-weight: bolder;
+    color: white;
+}
+
+
+.kotakganal a{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    margin-left: 100px;
+    font-size: 16px; 
+}
+
+.kotakganal a:hover {
+    background-color: white;
+    color: black;
+}
+
+.kotak .gambar {
+    position: relative;
+    overflow: hidden;
+}
+
+.kotak .detail {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; 
+    padding: 15px; 
+    transform: translateY(100%);
+    transition: transform 0.3s; 
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+
+.kotak:hover .detail {
+    transform: translateY(-1%);
+    opacity: 1;
+}
+.kotak .gambar img {
+    filter: blur(0);
+    transition: filter 0.3s;
+}
+
+.kotak:hover .gambar img {
+    filter: blur(5px);
+}
+
+@media only screen and (max-width: 1024px) {
+    .kotakganal {
+        width: 100%;
+        display: block;
+        padding: 20px;
+    }
+
+    .kotak {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .gambar img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .kotak:hover .detail{
+            transform: translateY(-7%);
+    }
+}
+
+#tentang-kami {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    background-color: #3e3e42;
+}
+
+.tentang-kami-img{
+    flex-basis: 50%;
+    background-image: url('asset/gambar/tentangkami.jpg');
+    background-size: cover;
+    height: 100%;
+    display: flex;
+}
+
+.tentang-kami-desc{
+    flex-basis: 60%;
+    padding: 45px;
+}
+
+.tentang-kami-desc h1 {
+    color:white;
+    font-size: 25px;
+}
+
+.tentang-kami-desc p{
+    margin: 30px 0px 10px;
+    line-height: 2;
+    text-align: justify;
+    color: wheat;
+}
+
+.jumlah{
+    display: flex;
+    align-items: center;
+}
+
+.tentang-kami-pemisah{
+    height:40px;
+    width:2px;
+    margin: 0px 35px;
+    border-radius: 5px;
+    background-color: #606060;
+}
+
+.jumlah-header{
+    font-size:35px; 
+    font-weight: bold;
+    color: white;
+}
+
+.jumlah-desc{
+    font-weight: bold;
+    margin-left: 6px;
+    color: white;
+}
+
+#kontak{
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(asset/gambar/bgkontak.jpg);
+}
+
+#kontak h1{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 20px;
+}
+
+.biokontak h5{
+    color: white;
+}
+
+.biokontak {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.biokontak img {
+    border-radius: 50%;
+}
+
+.sosial-media {
+    display: flex;
+    justify-content: center;
+}
+
+.media {
+    margin: 0 10px; 
+}
+
+#footer {
+    background-color: #2d2d30;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left, .footer-right {
+    flex-basis: 25%;
+}
+
+.footer-center {
+    flex-basis: 50%;
+}
+
+.footer-navigation {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-navigation li {
+    margin-bottom: 10px;
+}
+
+.footer-navigation a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-navigation a:hover {
+    background-color: white;
+    color: black;
+}
+
+.footer-logo {
+    margin-bottom: 5px;
+}
+
+.footer-slogan {
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.footer-copyright {
+    margin-top: 20px;
+}
+
